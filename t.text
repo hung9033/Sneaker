@@ -1,0 +1,55 @@
+ if (quantity <= 0) return;
+    if (!product || !product.id) {
+      console.error('Product or Product ID is missing');
+      return;
+    }
+
+    // Bước 1: Lấy giỏ hàng hiện tại từ localStorage
+    const cartStorage = localStorage.getItem('carts') || "[]";
+    const carts: CartItem[] = JSON.parse(cartStorage) || [];
+
+    // Bước 2: Kiểm tra sản phẩm đã có trong giỏ hàng chưa
+    const existingItem = carts.find((item: CartItem) => item.product?.id === product.id);
+
+    if (existingItem) {
+      // Nếu sản phẩm đã có, cập nhật số lượng
+      existingItem.quantity += quantity;
+    } else {
+      // Nếu sản phẩm chưa có, thêm mới vào giỏ hàng
+      carts.push({ product, quantity });
+    }
+    console.log(carts);
+
+    // Bước 3: Lưu giỏ hàng đã cập nhật lại vào localStorage
+    localStorage.setItem('carts', JSON.stringify(carts));
+    setCart(carts.length); // Cập nhật trạng thái giỏ hàng
+
+==============================================================================
+if (!product || !product.id) {
+      console.error('Product or Product ID is missing');
+      return;
+    }
+  
+    // Get the current cart from localStorage
+    const cartStorage = localStorage.getItem('carts') || "[]";
+    const carts: CartItem[] = JSON.parse(cartStorage) || [];
+  
+    // Check if the product is already in the cart
+    const existingItem = carts.find((item: CartItem) => item.product.id === product.id);
+  
+    if (existingItem) {
+      // If the product is already in the cart, update the quantity
+      existingItem.quantity += quantity;
+    } else {
+      // If the product is not in the cart, add it with the specified quantity
+      if (quantity > 0) {
+        carts.push({ product, quantity });
+      } else {
+        console.error('Quantity must be a positive number');
+      }
+    }
+    // Save the updated cart to localStorage
+    localStorage.setItem('carts', JSON.stringify(carts));
+  
+    // Update the cart count in the context
+    setCart(carts.length);

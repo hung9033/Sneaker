@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Product",
+      "price": "10",
+      "img": "https://product.hstatic.net/200000255805/product/z4473710787586_dd16ee0e88eafe7b9f63a6bbb58a10ac_fe0467cf864e4ad4ad20d8c1a87b30e3_master.jpg",
+      "description": "Product description",
+      "category": "electronics"
+    },
+    {
+      "id": "2",
+      "name": "Product 2",
+      "price": "11",
+      "img": "https://product.hstatic.net/200000255805/product/z4473710787586_dd16ee0e88eafe7b9f63a6bbb58a10ac_fe0467cf864e4ad4ad20d8c1a87b30e3_master.jpg",
+      "description": "Product descriptionsss 2\n",
+      "category": "clothing"
+    },
+    {
+      "id": "2",
+      "name": "Product 1",
+      "price": 1099,
+      "img": "https://product.hstatic.net/200000255805/product/z4473710787586_dd16ee0e88eafe7b9f63a6bbb58a10ac_fe0467cf864e4ad4ad20d8c1a87b30e3_master.jpg",
+      "description": "Product description"
+    }
+  ],
+  "users": [
+    {
+      "email": "hunghpph43229@fpt.edu.vn",
+      "password": "$2a$10$XaGry/KRY3zWJRtasJgRVegxwWyhfG3ubsSKaa16XsWST12rjel3i",
+      "username": "hung2003",
+      "id": 1
+    }
+    
+  ]
+}
